@@ -1,4 +1,4 @@
-import { CarProps, FilterProps } from "../types";
+import { CarCardProps, CarProps, FilterProps } from "../types";
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
   const basePricePerDay = 50; // Base rental price per day in dollars
@@ -64,7 +64,7 @@ export async function fetchCars(filters: FilterProps) {
   return result;
 }
 
-export const generateCarImageUrl = (car: CarProps, angle?: string) => {
+export const generateCarImageUrl = (car: CarCardProps, angle?: string) => {
   const url = new URL("https://cdn.imagin.studio/getimage");
   const { make, model, year } = car;
 
